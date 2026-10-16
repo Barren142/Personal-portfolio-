@@ -14,7 +14,7 @@ export default function App() {
     const sectionIds = ['home', 'about', 'skills', 'projects', 'contact'];
     
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
+      const scrollPosition = window.scrollY + 180;
       
       for (const id of sectionIds) {
         const el = document.getElementById(id);
@@ -35,14 +35,11 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#08090E] text-slate-100 flex flex-col relative selection:bg-indigo-500/30 selection:text-indigo-200">
-      {/* Subtle top ambient glow */}
-      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-indigo-900/10 via-purple-900/5 to-transparent blur-3xl pointer-events-none -z-10" />
-
+    <div className="min-h-screen bg-white text-[#111111] flex flex-col relative selection:bg-[#111111] selection:text-white">
       {/* Navigation Bar */}
       <Navbar activeSection={activeSection} />
 
-      {/* Main Sections */}
+      {/* Main Content Sections with Alternating Light / Dark Surfaces */}
       <main className="flex-1">
         <HeroSection />
         <AboutSection />

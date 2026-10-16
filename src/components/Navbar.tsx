@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, Github } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface NavbarProps {
@@ -37,26 +37,26 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         scrolled
-          ? 'bg-[#08090E]/90 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/30'
-          : 'bg-transparent border-b border-transparent'
+          ? 'bg-white/95 backdrop-blur-md border-b border-[#E5E7EB] shadow-xs'
+          : 'bg-white border-b border-[#E5E7EB]'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-8 h-16 md:h-20">
-          {/* Zone 1: Single text element wordmark */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          {/* Left: Brand Name */}
           <a
             href="#home"
             onClick={(e) => handleLinkClick(e, '#home')}
-            className="text-lg md:text-xl font-bold tracking-tight text-white hover:text-indigo-400 transition-colors whitespace-nowrap shrink-0 group flex items-center gap-2"
+            className="text-lg sm:text-xl font-bold tracking-tight text-[#111111] hover:text-[#242424] transition-colors whitespace-nowrap shrink-0 font-display flex items-center gap-2.5"
           >
-            <span className="w-2 h-2 rounded-full bg-indigo-500 group-hover:scale-125 transition-transform"></span>
+            <span className="w-2.5 h-2.5 bg-[#111111] rounded-xs" />
             <span>{PERSONAL_INFO.name}</span>
           </a>
 
-          {/* Zone 2: 5 clean single-line text navigation links */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+          {/* Center/Right: 5 Clean Nav Links */}
+          <nav className="hidden md:flex items-center gap-7 text-sm font-medium">
             {navLinks.map((link) => {
               const isActive = activeSection === link.label.toLowerCase();
               return (
@@ -64,54 +64,45 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                   key={link.label}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
-                  className={`relative py-1 transition-colors whitespace-nowrap shrink-0 ${
+                  className={`transition-colors whitespace-nowrap shrink-0 relative py-1 ${
                     isActive
-                      ? 'text-white font-semibold'
-                      : 'text-slate-400 hover:text-slate-200'
+                      ? 'text-[#111111] font-semibold'
+                      : 'text-[#666666] hover:text-[#111111]'
                   }`}
                 >
                   {link.label}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#111111] rounded-full" />
                   )}
                 </a>
               );
             })}
           </nav>
 
-          {/* Zone 3: 1 primary action */}
+          {/* Far Right: Clearly Visible Dark Contact Button */}
           <div className="hidden md:flex items-center gap-3 shrink-0">
-            <a
-              href={PERSONAL_INFO.contact.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-              className="p-2 text-slate-400 hover:text-white hover:bg-slate-800/80 rounded-lg transition-colors"
-            >
-              <Github className="w-4 h-4" />
-            </a>
             <a
               href="#contact"
               onClick={(e) => handleLinkClick(e, '#contact')}
-              className="px-4 py-2 text-xs font-semibold text-white bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 rounded-lg shadow-sm hover:shadow-indigo-500/25 transition-all whitespace-nowrap shrink-0 flex items-center gap-1.5"
+              className="px-5 py-2.5 text-xs font-semibold text-white bg-[#111111] hover:bg-[#242424] active:scale-98 rounded-lg shadow-xs hover:shadow-sm transition-all duration-150 flex items-center gap-1.5 cursor-pointer whitespace-nowrap"
             >
               <span>Get in Touch</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#B8BCC2]" />
             </a>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu toggle button */}
           <div className="flex md:hidden items-center gap-2">
             <a
               href="#contact"
               onClick={(e) => handleLinkClick(e, '#contact')}
-              className="px-3 py-1.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-md transition-colors"
+              className="px-3.5 py-1.5 text-xs font-semibold text-white bg-[#111111] rounded-md transition-colors"
             >
               Contact
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800/60 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+              className="p-2 text-[#242424] hover:text-[#111111] rounded-lg hover:bg-[#F7F7F7] transition-colors focus:outline-none cursor-pointer"
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
             >
@@ -121,10 +112,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
         </div>
       </div>
 
-      {/* Mobile dropdown menu (enforcing <= 15% mobile sticky height constraint) */}
+      {/* Professional Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0D0F17]/95 backdrop-blur-xl border-b border-slate-800 px-4 pt-3 pb-5 shadow-2xl">
-          <nav className="flex flex-col space-y-3">
+        <div className="md:hidden bg-white border-b border-[#E5E7EB] px-4 pt-3 pb-5 shadow-lg animate-in fade-in duration-150">
+          <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => {
               const isActive = activeSection === link.label.toLowerCase();
               return (
@@ -134,25 +125,25 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                   onClick={(e) => handleLinkClick(e, link.href)}
                   className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                     isActive
-                      ? 'text-white bg-slate-800/80 font-semibold'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800/40'
+                      ? 'text-[#111111] bg-[#F7F7F7] font-semibold'
+                      : 'text-[#666666] hover:text-[#111111] hover:bg-[#F7F7F7]/60'
                   }`}
                 >
                   {link.label}
                 </a>
               );
             })}
-            <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between px-3">
+            <div className="pt-3 mt-2 border-t border-[#E5E7EB] flex items-center justify-between px-3 text-xs text-[#666666]">
+              <span>B.Tech CSE (Data Science)</span>
               <a
                 href={PERSONAL_INFO.contact.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-slate-400 hover:text-white flex items-center gap-1.5"
+                className="text-[#111111] font-semibold flex items-center gap-1"
               >
-                <Github className="w-3.5 h-3.5" />
-                <span>github.com/Barren142</span>
+                <span>GitHub</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
-              <span className="text-xs text-slate-500">1st Year Undergrad</span>
             </div>
           </nav>
         </div>

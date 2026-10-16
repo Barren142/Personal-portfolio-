@@ -3,11 +3,21 @@ import { ProjectItem, SkillItem, FocusPillar } from '../types/portfolio';
 export const PERSONAL_INFO = {
   name: 'Snehil Kashyap',
   shortName: 'Snehil',
-  headline: 'Aspiring Web Developer | B.Tech CSE (Data Science) Student',
-  academicStatus: '1st Year Undergraduate · Computer Science & Data Science',
-  introduction: "Hi, I'm Snehil Kashyap, a computer science student passionate about programming, web development, artificial intelligence, and robotics. I'm continuously learning new technologies and building projects to improve my skills.",
-  aboutDetailed: "I am a first-year B.Tech student specializing in Computer Science and Data Science. My journey in tech centers around curious problem-solving, building intuitive and responsive web interfaces, and understanding data-driven systems. I am intrigued by how modern front-end engineering pairs with artificial intelligence and robotics to automate real-world workflows.",
-  learningPhilosophy: "As an early-career engineer, I place tremendous value on foundational craft: writing clean HTML and CSS, mastering JavaScript logic, writing algorithmic Python, and leveraging modern developer tooling responsibly. I actively build web applications to transform classroom concepts into working digital experiences.",
+  heroLabel: 'B.TECH STUDENT · ASPIRING WEB DEVELOPER',
+  headline: 'Turning Curiosity Into Digital Experiences.',
+  introduction: "I'm a Computer Science and Data Science student driven by curiosity about technology and the possibilities it creates. From building websites to exploring programming and artificial intelligence, I enjoy learning through experimentation and transforming ideas into practical digital experiences. Every project is an opportunity to improve, create, and think differently.",
+  aboutHeading: 'Beyond the Code.',
+  aboutParagraphs: [
+    "I'm currently pursuing a B.Tech in Computer Science and Data Science, building a strong foundation in programming and digital technologies.",
+    "My interest goes beyond writing code. I enjoy understanding how things work, experimenting with new tools, and creating digital experiences that are both useful and visually engaging.",
+    "I'm especially interested in web development, artificial intelligence, and robotics. Through personal projects and continuous learning, I'm working towards becoming a versatile developer who can turn ideas into meaningful solutions."
+  ],
+  skillsHeading: 'My Toolkit',
+  skillsSupportingText: "Technologies and tools I'm learning, practising, and using to bring ideas to life.",
+  projectsHeading: 'Selected Work',
+  projectsSupportingText: "A collection of websites I've built to practise my skills, explore design, and turn ideas into working digital experiences.",
+  contactHeading: 'Have Something in Mind?',
+  contactSupportingText: "I'm always interested in learning, exploring new ideas, and connecting with people who enjoy building meaningful things through technology.",
   contact: {
     email: 'kashyapsnehil6@gmail.com',
     phone: '+91 8251036828',
@@ -21,31 +31,31 @@ export const PERSONAL_INFO = {
 export const FOCUS_PILLARS: FocusPillar[] = [
   {
     title: 'Web Development',
-    subtitle: 'Front-End Architecture & Responsive Interfaces',
-    description: 'Constructing clean, accessible, mobile-first web pages using semantic HTML5, modern CSS techniques, and vanilla JavaScript DOM manipulation.',
+    subtitle: 'Responsive Interfaces & Semantic Markup',
+    description: 'Constructing modern, accessible websites using clean HTML, modular CSS layouts, and interactive JavaScript.',
     iconName: 'Layout',
-    topics: ['Responsive Web Design', 'Semantic Markup', 'CSS Grid & Flexbox', 'Vanilla JavaScript & ES6+']
+    topics: ['Responsive Systems', 'Semantic HTML5', 'CSS Grid & Flexbox', 'Client-Side Interactivity']
   },
   {
     title: 'Computer Science & Data Science',
-    subtitle: 'Computational Foundations & Python',
-    description: 'Pursuing foundational coursework in discrete structures, object-oriented programming, data structures, and data science exploratory analysis.',
+    subtitle: 'Foundational Logic & Python Scripting',
+    description: 'Exploring core data structures, algorithmic thinking, and analytical data manipulation with Python.',
     iconName: 'Database',
-    topics: ['Python Programming', 'Data Structures & Logic', 'Exploratory Data Analysis', 'Statistical Thinking']
+    topics: ['Python Logic', 'Data Structures', 'Data Exploration', 'Algorithmic Problem Solving']
   },
   {
     title: 'Artificial Intelligence',
-    subtitle: 'AI-Augmented Development & Machine Learning Curiosity',
-    description: 'Exploring machine learning concepts and applying AI-assisted developer workflows to accelerate coding iteration, design ideation, and problem debugging.',
+    subtitle: 'Emerging Tools & AI-Augmented Workflows',
+    description: 'Experimenting with modern AI tools, prompt structuring, and intelligent systems to accelerate developer iterations.',
     iconName: 'Cpu',
-    topics: ['AI-Assisted Web Creation', 'Prompt Engineering for Code', 'Introductory ML Principles', 'Developer Tooling']
+    topics: ['AI-Augmented Development', 'Prompt Architecture', 'Machine Learning Concepts', 'Developer Workflows']
   },
   {
-    title: 'Robotics & Hardware Exploration',
-    subtitle: 'Automation, Embedded Logic & Hardware',
-    description: 'Investigating microcontrollers, sensor-actuator loops, and basic automation logic that bridge digital code with physical computing hardware.',
+    title: 'Robotics & Hardware',
+    subtitle: 'Automation & Embedded Exploration',
+    description: 'Investigating microcontrollers, sensor-actuator loops, and hardware logic connecting software to physical devices.',
     iconName: 'Bot',
-    topics: ['Microcontroller Basics', 'Sensor Integration', 'Hardware Logic', 'Embedded Automation']
+    topics: ['Microcontrollers', 'Sensor Interfacing', 'Automation Logic', 'Embedded Computing']
   }
 ];
 
@@ -55,23 +65,20 @@ export const SKILLS_LIST: SkillItem[] = [
     name: 'HTML',
     category: 'Front-End',
     status: 'Learning & Practicing',
-    description: 'Structuring clean, semantic, and accessible web pages with modern HTML5 conventions, meta tags, and modular page layouts.',
+    description: 'Structuring clean, semantic, and accessible document architectures with modern HTML5 conventions and responsive viewports.',
     focusAreas: [
-      'Semantic document structures (<header>, <main>, <article>, <section>)',
-      'Accessible form elements with appropriate input validations',
-      'Media integration (responsive images, audio, video)',
-      'Meta tags & viewport configurations for mobile devices'
+      'Semantic document hierarchy (<header>, <main>, <section>, <article>)',
+      'Accessible form inputs and input validation standards',
+      'Media integration and performant asset delivery',
+      'SEO foundations and viewport meta configurations'
     ],
     codeSample: {
       language: 'html',
-      filename: 'index.html',
-      code: `<!-- Semantic & Accessible Structure -->
-<main class="container">
-  <section class="card" aria-labelledby="feature-title">
-    <h2 id="feature-title">Interactive Learning</h2>
-    <p>Semantic markup ensures accessibility & SEO.</p>
-  </section>
-</main>`
+      filename: 'structure.html',
+      code: `<section class="editorial-card">
+  <h2>Clean Semantic Hierarchy</h2>
+  <p>Accessible structures form the bedrock of responsive design.</p>
+</section>`
     }
   },
   {
@@ -79,24 +86,20 @@ export const SKILLS_LIST: SkillItem[] = [
     name: 'CSS',
     category: 'Front-End',
     status: 'Learning & Practicing',
-    description: 'Creating aesthetically refined, responsive visual layouts with Flexbox, CSS Grid, custom properties, and smooth micro-animations.',
+    description: 'Crafting responsive layouts, fluid typography, and restrained transitions with Flexbox, CSS Grid, and custom variables.',
     focusAreas: [
-      'CSS Flexbox and CSS Grid layout algorithms',
-      'CSS variables (custom properties) for consistent theme design',
-      'Smooth state transitions and keyframe animations',
-      'Modern dark mode aesthetics and box-model mastery'
+      'CSS Flexbox & CSS Grid responsive layout patterns',
+      'Custom properties (CSS variables) for cohesive theme palettes',
+      'Fluid typography with clamp() and relative viewport units',
+      'Clean border treatments and subtle hover interactions'
     ],
     codeSample: {
       language: 'css',
-      filename: 'styles.css',
-      code: `:root {
-  --accent-cyan: #38bdf8;
-  --bg-surface: #0f172a;
-}
-.grid-container {
+      filename: 'layout.css',
+      code: `.container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }`
     }
   },
@@ -105,23 +108,20 @@ export const SKILLS_LIST: SkillItem[] = [
     name: 'JavaScript',
     category: 'Programming',
     status: 'Learning & Practicing',
-    description: 'Implementing dynamic client-side interactivity, DOM manipulation, asynchronous operations, and modular ES6+ JavaScript code.',
+    description: 'Implementing dynamic client-side logic, event handling, DOM manipulation, and modern ES6+ programming practices.',
     focusAreas: [
-      'DOM querying, event listeners, and interactive UI state',
-      'ES6+ modern syntax: arrow functions, destructuring, template literals',
+      'DOM querying, manipulation, and event handling',
+      'Modern ES6+ syntax: arrow functions, modules, destructuring',
       'Asynchronous code handling with Promises and async/await',
-      'Array methods (map, filter, reduce) for client data processing'
+      'Array operations (map, filter, reduce) for UI data binding'
     ],
     codeSample: {
       language: 'javascript',
       filename: 'app.js',
-      code: `// Dynamic Interaction & Event Handling
-const projectButtons = document.querySelectorAll('.view-btn');
-
-projectButtons.forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    const targetUrl = e.currentTarget.dataset.url;
-    window.open(targetUrl, '_blank', 'noopener,noreferrer');
+      code: `const links = document.querySelectorAll('a[href^="#"]');
+links.forEach(link => {
+  link.addEventListener('click', (e) => {
+    // Smooth navigation interaction
   });
 });`
     }
@@ -131,23 +131,21 @@ projectButtons.forEach(btn => {
     name: 'Python',
     category: 'Programming',
     status: 'Learning & Practicing',
-    description: 'Writing computational logic, exploring algorithms, and applying Python towards computer science fundamentals and data analysis.',
+    description: 'Writing computational logic, exploring algorithms, and applying Python towards data science fundamentals and script automation.',
     focusAreas: [
-      'Core syntax, list comprehensions, and dictionary mappings',
-      'Algorithmic problem-solving and basic data structures',
-      'Working with files and JSON data structures',
-      'Foundations for data science exploration and automation scripts'
+      'Core syntax, list comprehensions, and dictionary processing',
+      'Foundational algorithms and data structure problem solving',
+      'Working with structured files and data records',
+      'Academic data science exploratory foundations'
     ],
     codeSample: {
       language: 'python',
-      filename: 'data_analyzer.py',
-      code: `# Pythonic data processing fundamentals
-def analyze_metrics(data_points: list[float]) -> dict:
-    valid_points = [x for x in data_points if x > 0]
+      filename: 'metrics.py',
+      code: `def process_dataset(values: list[float]) -> dict:
+    valid = [v for v in values if v >= 0]
     return {
-        "count": len(valid_points),
-        "average": sum(valid_points) / len(valid_points) if valid_points else 0.0,
-        "max_value": max(valid_points, default=0.0)
+        "count": len(valid),
+        "mean": sum(valid) / len(valid) if valid else 0.0
     }`
     }
   },
@@ -156,23 +154,20 @@ def analyze_metrics(data_points: list[float]) -> dict:
     name: 'Responsive Web Design',
     category: 'Design',
     status: 'Learning & Practicing',
-    description: 'Crafting fluid web interfaces that adapt seamlessly across mobile phones, tablets, and high-resolution desktop displays.',
+    description: 'Building adaptable layouts that maintain flawless readability and ergonomic touch targets across phones, tablets, and desktop displays.',
     focusAreas: [
-      'Mobile-first layout strategies and responsive breakpoints',
-      'Fluid typography with clamp() and relative viewport units',
-      'Touch-friendly interactive targets and hit areas (>= 44px)',
-      'Cross-browser and multi-device manual testing'
+      'Mobile-first responsive strategies and fluid breakpoints',
+      'Flexible grid systems and proportional whitespace scaling',
+      'Touch targets >= 44px for intuitive mobile navigation',
+      'Cross-device visual verification and testing'
     ],
     codeSample: {
       language: 'css',
       filename: 'responsive.css',
-      code: `/* Fluid Typography & Responsive Breakpoints */
-h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-}
-@media (max-width: 768px) {
-  .site-nav {
-    flex-direction: column;
+      code: `@media (min-width: 768px) {
+  .hero-container {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }`
     }
@@ -182,21 +177,20 @@ h1 {
     name: 'AI-Assisted Website Development',
     category: 'Modern AI',
     status: 'Learning & Practicing',
-    description: 'Employing modern AI developer tools and structured prompts for rapid prototyping, debugging, code refactoring, and exploring cutting-edge workflows.',
+    description: 'Leveraging modern AI developer tools with structured prompting for accelerated prototyping, code refactoring, and exploring efficient workflows.',
     focusAreas: [
-      'Structuring precise technical prompts for front-end scaffolding',
-      'AI-guided code review, bug identification, and refactoring',
-      'Iterative UI experimentation and component architectural ideation',
-      'Evaluating and verifying AI-generated output with rigorous testing'
+      'Precise prompt formulation for front-end scaffolding',
+      'AI-assisted debugging, syntax review, and refactoring',
+      'Iterative design ideation and component layout planning',
+      'Rigorous verification of generated code against web standards'
     ],
     codeSample: {
       language: 'markdown',
-      filename: 'prompt_workflow.md',
-      code: `# AI-Assisted Developer Loop
-1. Define clear component specs & interface constraints
-2. Generate scaffold using AI tooling
-3. Inspect and verify against WCAG contrast & responsive rules
-4. Refactor and test on target devices`
+      filename: 'workflow.md',
+      code: `## AI Workflow
+1. Specify clear architectural requirements
+2. Generate initial layout component
+3. Review against accessibility and responsiveness standards`
     }
   }
 ];
@@ -205,54 +199,54 @@ export const PROJECTS_LIST: ProjectItem[] = [
   {
     id: 'school-website',
     title: 'School Website',
-    category: 'Educational Platform',
+    category: 'Education Platform',
     url: 'https://school-one-ashy.vercel.app',
-    tagline: 'Comprehensive institutional web platform with academic curriculum and admissions info',
-    description: 'A complete, responsive educational website built for schools and academic institutions. Provides structured presentation for academic programs, admissions criteria, faculty profiles, and school notice boards with an intuitive layout.',
+    tagline: 'Comprehensive educational platform with academic curriculum and admissions',
+    description: 'A responsive educational web platform designed for schools, featuring academic program outlines, admissions information, and an accessible multi-page layout.',
     features: [
-      'Responsive multi-page layout optimized for parents, students, and educators',
-      'Academic curriculum overview and admissions inquiry form',
-      'Clean school facilities gallery and campus announcements section',
-      'Mobile-friendly navigation with quick contact access'
+      'Academic curriculum overview and admissions inquiry structure',
+      'Clean school facilities gallery and campus announcements',
+      'Mobile-friendly responsive navigation with clear typography',
+      'Structured presentation for parents, students, and educators'
     ],
     technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Grid', 'Vercel'],
     themeColor: {
-      accent: '#38bdf8', // sky/blue
-      border: 'rgba(56, 189, 248, 0.3)',
-      glow: 'rgba(56, 189, 248, 0.15)',
-      badgeBg: 'rgba(56, 189, 248, 0.1)'
+      accent: '#B8BCC2',
+      border: '#E5E7EB',
+      glow: 'transparent',
+      badgeBg: '#F7F7F7'
     },
     mockupDetails: {
       browserUrl: 'school-one-ashy.vercel.app',
-      headline: 'Empowering Future Leaders through Excellence',
-      subheadline: 'Holistic education, innovative laboratories, and world-class academic standards.',
+      headline: 'Empowering Academic Excellence & Growth',
+      subheadline: 'Holistic curriculum, state-of-the-art facilities, and dedicated faculty.',
       mockupType: 'school'
     }
   },
   {
     id: 'gym-website',
     title: 'Gym Website',
-    category: 'Fitness & Athletics',
+    category: 'Health & Fitness',
     url: 'https://gym-sand-one.vercel.app',
-    tagline: 'High-energy fitness studio web portal with class schedules and membership tiers',
-    description: 'An athletic, high-contrast website built for gyms and fitness training centers. Features interactive program cards, workout class timings, trainer profiles, and transparent membership tier pricing.',
+    tagline: 'Dynamic fitness studio web portal with class schedules and membership tiers',
+    description: 'A modern fitness club website featuring workout program catalogs, trainer showcases, class schedules, and a streamlined membership tier comparison.',
     features: [
-      'Dynamic dark athletic aesthetic with high visual contrast',
       'Interactive fitness program showcases (Strength, Cardio, HIIT, Yoga)',
-      'Class schedule overview and membership plan comparison',
-      'Direct call-to-action booking layout for trial workout passes'
+      'Weekly training schedule layout and trainer spotlight',
+      'Transparent membership plan comparison with call-to-actions',
+      'High-contrast, mobile-friendly athletic user interface'
     ],
     technologies: ['HTML5', 'Modern CSS', 'CSS Flexbox/Grid', 'JavaScript', 'Vercel'],
     themeColor: {
-      accent: '#818cf8', // indigo
-      border: 'rgba(129, 140, 248, 0.3)',
-      glow: 'rgba(129, 140, 248, 0.15)',
-      badgeBg: 'rgba(129, 140, 248, 0.1)'
+      accent: '#B8BCC2',
+      border: '#E5E7EB',
+      glow: 'transparent',
+      badgeBg: '#F7F7F7'
     },
     mockupDetails: {
       browserUrl: 'gym-sand-one.vercel.app',
-      headline: 'Forge Your Strength. Transform Your Body.',
-      subheadline: 'State-of-the-art equipment, certified athletic trainers, and personalized programs.',
+      headline: 'Strength, Endurance & Professional Training',
+      subheadline: 'Modern fitness facility, personal coaching, and structured workout programs.',
       mockupType: 'gym'
     }
   },
@@ -261,25 +255,25 @@ export const PROJECTS_LIST: ProjectItem[] = [
     title: 'Beauty Parlour Website',
     category: 'Lifestyle & Wellness',
     url: 'https://sk-qwbf.vercel.app',
-    tagline: 'Refined boutique salon website with beauty treatment menus and appointment booking',
-    description: 'An elegant, aesthetically refined website designed for beauty parlours and luxury salons. Showcases beauty treatments, skin care services, bridal packages, and an effortless customer inquiry interface.',
+    tagline: 'Refined boutique salon website with beauty treatment menus and booking flow',
+    description: 'An elegant salon and wellness website showcasing categorized beauty treatments, stylist profiles, and an intuitive customer appointment booking flow.',
     features: [
-      'Refined boutique typography with soft color palette and clean spacing',
-      'Categorized salon service menu (Hair, Skin, Spa, Bridal Makeover)',
+      'Categorized salon service menu (Hair Styling, Skin Care, Spa, Bridal)',
       'Stylist showcases and client appointment request flow',
-      'Mobile-responsive layout with instant booking call-to-actions'
+      'Refined boutique typography with generous spacing',
+      'Seamless multi-device responsiveness'
     ],
     technologies: ['HTML5', 'Custom CSS', 'Responsive Layout', 'JavaScript', 'Vercel'],
     themeColor: {
-      accent: '#c084fc', // purple / violet
-      border: 'rgba(192, 132, 252, 0.3)',
-      glow: 'rgba(192, 132, 252, 0.15)',
-      badgeBg: 'rgba(192, 132, 252, 0.1)'
+      accent: '#B8BCC2',
+      border: '#E5E7EB',
+      glow: 'transparent',
+      badgeBg: '#F7F7F7'
     },
     mockupDetails: {
       browserUrl: 'sk-qwbf.vercel.app',
-      headline: 'Refined Beauty & Personalized Wellness Care',
-      subheadline: 'Signature treatments, organic hair care, and bespoke bridal styling experiences.',
+      headline: 'Refined Beauty Treatments & Bespoke Care',
+      subheadline: 'Curated styling services, organic treatments, and relaxing ambiance.',
       mockupType: 'beauty'
     }
   }
